@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang di Kota Ponorogo</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    /* Header h1 */
+    h1 {
+      font-size: 3em; /* Ukuran font untuk h1 */
+      color: #ff0000;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* Header h2 */
+    h2 {
+      font-size: 1.5em; /* Ukuran font untuk h2 */
+      color: #2c3e50;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    /* Header */
+    header {
+      background: url('img/hitam.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+    }
+
+    /* Navbar Styles */
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; /* Center the navbar items */
+      border-top: 2px solid #ecf0f1; /* Add a top border for some structure */
+      border-bottom: 2px solid #ecf0f1; /* Add a bottom border to separate navbar from content */
+      background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for the navbar */
+      border-radius: 8px; /* Rounded corners for a sleek look */
+    }
+
+    header nav ul li {
+      margin-right: 30px;
+      position: relative;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease; /* Added transition for color and scale effect */
+      padding: 10px 15px; /* Add some padding for clickable area */
+      border-radius: 6px; /* Rounded corners for the nav items */
+    }
+
+    header nav ul li a:hover {
+      color: #ecf0f1;
+      background-color: #e74c3c; /* Background color change on hover */
+      transform: scale(1.1); /* Slight scale up effect for hover */
+    }
+
+    header nav ul li a:active {
+      color: #ff6347; /* Active link color */
+      transform: scale(0.98); /* Slightly reduce the size on click */
+    }
+
+    /* Active link indicator */
+    header nav ul li a.active {
+      border-bottom: 3px solid #ff6347; /* Add underline to the active link */
+    }
+
+    /* Section */
+    .section {
+      padding: 40px 0;
+      background-color: white;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .section:nth-child(odd) {
+      background-color: #f4f6f7;
+    }
+
+    .section p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #7f8c8d;
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      header nav ul {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      header nav ul li {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .section {
+        padding: 30px 15px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Kota Ponorogo</h1>
+      <nav>
+        <ul>
+          <li><a href="#tentang" class="active">Tentang</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bagian Tentang -->
+  <section id="tentang" class="section" style="background-color: #ecf0f1; padding-top: 60px;">
+    <div class="container">
+      <h1 style="font-size: 3.5em; color: #e74c3c; text-align: center; margin-bottom: 40px;">Tentang Ponorogo</h1>
+      <!-- Section Intro -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <img src="img/macan.jpg" alt="Ponorogo Overview" style="width: 80%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.2em; line-height: 1.8; color: #34495e; max-width: 900px; margin: 30px auto;">
+          Ponorogo adalah sebuah kabupaten di Jawa Timur yang terkenal dengan seni Reog Ponorogo, keindahan alam, serta potensi pertaniannya yang melimpah. Sebagai Kota Reog, Ponorogo memiliki nilai budaya yang sangat tinggi dan terus berkembang menjadi salah satu destinasi wisata yang menarik di Indonesia.
+        </p>
+      </div>
+      <!-- History Section -->
+      <div style="margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; padding: 0 20px; text-align: justify;">
+          <h2 style="font-size: 2.5em; color: #2c3e50;">Sejarah Kota Ponorogo</h2>
+          <p style="font-size: 1.2em; color: #7f8c8d;">
+            Ponorogo sudah dikenal sejak zaman Majapahit pada abad ke-15. Nama Ponorogo berasal dari bahasa Jawa yang berarti tanah yang subur. Kota ini memiliki peran penting pada masa penjajahan Belanda dan menjadi simbol perlawanan kemerdekaan.
+          </p>
+        </div>
+        <div style="flex: 1; padding: 0 20px; text-align: center;">
+          <img src="img/reog.jpg" alt="Ponorogo History" style="width: 80%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+        </div>
+      </div>
+      <!-- Culture Section -->
+      <div style="margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; padding: 0 20px; text-align: center;">
+          <img src="img/png5.jpg" alt="Reog Ponorogo" style="width: 80%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+        </div>
+        <div style="flex: 1; padding: 0 20px; text-align: justify;">
+          <h2 style="font-size: 2.5em; color: #2c3e50;">Seni Budaya: Reog Ponorogo</h2>
+          <p style="font-size: 1.2em; color: #7f8c8d;">
+            Reog Ponorogo adalah seni pertunjukan yang terkenal di seluruh Indonesia dan dunia. Dengan topeng Singa Barong yang besar, pertunjukan ini menggambarkan legenda tentang Raja Singo Barong dan Raja Jatayu. Setiap tahunnya, festival Reog Ponorogo menarik ribuan pengunjung dari seluruh dunia.
+          </p>
+        </div>
+      </div>
+      <!-- Nature Section -->
+      <div style="margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; padding: 0 20px; text-align: justify;">
+          <h2 style="font-size: 2.5em; color: #2c3e50;">Keindahan Alam Ponorogo</h2>
+          <p style="font-size: 1.2em; color: #7f8c8d;">
+            Ponorogo tidak hanya kaya akan seni, tetapi juga memiliki keindahan alam yang luar biasa. Terletak di kaki Gunung Wilis, tempat-tempat seperti Air Terjun Sumber Ubalan, Bukit Dhoho, dan Rawa Jombor menjadi surga bagi para pecinta alam.
+          </p>
+        </div>
+        <div style="flex: 1; padding: 0 20px; text-align: center;">
+          <img src="img/ngebel.jpg" alt="Nature Ponorogo" style="width: 80%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Galeri -->
+  <section id="galeri" class="section" style="background-color: #f4f6f7;">
+    <div class="container">
+      <h1 style="font-size: 3em; text-align: center; margin-bottom: 40px;">Galeri</h1>
+      <p style="font-size: 1.2em; text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+        Berikut ini adalah beberapa gambar dari Ponorogo, termasuk objek wisata, budaya, dan keindahan alam yang ada di kota ini.
+      </p>
+      <div class="gallery">
+        <img src="img/png1.jpeg" style="height: 200px">
+        <img src="img/png2.jpeg" style="height: 200px">
+        <img src="img/sate.jpg" style="height: 200px">
+        <img src="img/ngebel.jpg" style="height: 200px">
+        <img src="img/macan.jpg" style="height: 200px">
+        <img src="img/bendo.jpeg" style="height: 200px">
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Kontak -->
+  <section id="kontak" class="section" style="background-color: #ffffff; padding-top: 60px;">
+    <div class="container">
+      <h1 style="font-size: 3.5em; color: #e74c3c; text-align: center; margin-bottom: 40px;">Kontak Kami</h1>
+      
+      <!-- Contact Form -->
+      <form action="#" method="POST" style="max-width: 800px; margin: 0 auto; background-color: #f9f9f9; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <label for="nama" style="font-size: 1.2em; color: #2c3e50;">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; color: #34495e;">
+        
+        <label for="email" style="font-size: 1.2em; color: #2c3e50;">Email</label>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; color: #34495e;">
+        
+        <label for="pesan" style="font-size: 1.2em; color: #2c3e50;">Pesan Anda</label>
+        <textarea id="pesan" name="pesan" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; color: #34495e;"></textarea>
+        
+        <button type="submit" style="background-color: #e74c3c; color: white; padding: 12px 30px; font-size: 1.2em; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s ease;">
+          Kirim Pesan
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kota Ponorogo. Semua hak dilindungi undang-undang.</p>
+  </footer>
+
+</body>
+</html>
