@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lingkungan Hidup yang Indah</title>
+  <style>
+    /* Reset default margin dan padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    /* Container utama */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      gap: 30px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4caf50;
+    }
+
+    /* Gambar hero */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x500/4CAF50/FFFFFF?text=Lingkungan+Hidup+Yang+Indah');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Bagian Konten */
+    .content {
+      padding: 40px 0;
+    }
+
+    .content h2 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Artikel tambahan */
+    .article {
+      margin-top: 50px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .article h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #4caf50;
+    }
+
+    .article p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* Card untuk informasi */
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      width: 30%;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 1.5em;
+      padding: 20px;
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .card p {
+      padding: 20px;
+      font-size: 1em;
+    }
+
+    /* Bagian Kontak */
+    .contact {
+      margin-top: 50px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .contact h3 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #4caf50;
+    }
+
+    .contact form {
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact label {
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 12px 20px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    /* Responsivitas */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2em;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      .article h3 {
+        font-size: 1.6em;
+      }
+
+      .contact form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .hero h2 {
+        font-size: 1.5em;
+      }
+
+      .content p {
+        font-size: 1em;
+      }
+
+      .contact button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Lingkungan Hidup yang Indah</h1>
+    </div>
+  </header>
+
+  <!-- Menu Navbar -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#content">Pentingnya Lingkungan</a></li>
+        <li><a href="#cards">Keberlanjutan</a></li>
+        <li><a href="#article">Isu Lingkungan</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="content" id="content">
+      <h2>Kenapa Lingkungan Hidup Itu Penting?</h2>
+      <p>
+        Lingkungan hidup adalah tempat di mana kita hidup dan berkembang. Oleh karena itu, menjaga kelestariannya sangat penting untuk kesehatan kita dan keberlanjutan planet ini. 
+        Dengan menjaga lingkungan, kita turut berperan dalam menciptakan dunia yang lebih baik bagi generasi mendatang.
+      </p>
+    </section>
+
+    <h1 align="center" id="cards">~ Edikasi Keberlanjutan Lingkungan ~</h1>
+    <section class="cards">
+      <div class="card">
+        <img src="hutan.jpg" alt="Hutan Lestari">
+        <h3>Hutan Lestari</h3>
+        <p>Hutan adalah paru-paru dunia. Menjaga hutan berarti menjaga keseimbangan ekosistem yang sangat penting untuk kehidupan manusia dan hewan.</p>
+      </div>
+      <div class="card">
+        <img src="sampah.jpeg" alt="Pengelolaan Sampah">
+        <h3>Pengelolaan Sampah</h3>
+        <p>Sampah yang dikelola dengan baik dapat mengurangi pencemaran. Proses daur ulang sangat membantu menjaga kelestarian bumi.</p>
+      </div>
+      <div class="card">
+        <img src="energi.png" alt="Energi Terbarukan">
+        <h3>Energi Terbarukan</h3>
+        <p>Pemanfaatan energi terbarukan, seperti energi matahari dan angin, adalah solusi untuk mengurangi ketergantungan pada energi fosil.</p>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <!-- Artikel tambahan -->
+    <h1 align="center" id="article">~ Isu dan Solusi Lingkungan ~</h1>
+    <section class="article">
+      <h3>Dampak Pemanasan Global Terhadap Ekosistem</h3>
+      <p>
+        Pemanasan global telah menjadi isu lingkungan yang mendesak. Kenaikan suhu bumi menyebabkan perubahan iklim yang ekstrim, seperti badai yang lebih kuat, cuaca yang lebih panas, dan mencairnya es di kutub. Dampaknya dapat mengancam ekosistem dan keberagaman hayati di seluruh dunia. Menjaga suhu bumi tetap stabil adalah langkah penting untuk melindungi planet ini.
+      </p>
+    </section>
+
+    <section class="article">
+      <h3>Pentingnya Daur Ulang dalam Menjaga Kelestarian Lingkungan</h3>
+      <p>
+        Daur ulang merupakan salah satu cara paling efektif untuk mengurangi jumlah sampah yang dibuang ke tempat pembuangan akhir. Dengan mendaur ulang bahan-bahan seperti kertas, plastik, dan logam, kita dapat mengurangi kebutuhan akan bahan baku baru dan mengurangi dampak negatif terhadap lingkungan. Setiap orang dapat berperan dengan mulai memilah sampah dan mendukung inisiatif daur ulang di sekitar mereka.
+      </p>
+    </section>
+
+    <section class="article">
+      <h3>Konservasi Sumber Daya Alam untuk Generasi Mendatang</h3>
+      <p>
+        Sumber daya alam yang kita miliki, seperti air, hutan, dan bahan tambang, sangat penting untuk keberlangsungan hidup manusia. Namun, eksploitasi berlebihan dapat menyebabkan kerusakan yang tidak dapat diperbaiki. Konservasi adalah langkah yang perlu diambil untuk memastikan bahwa sumber daya alam tetap tersedia bagi generasi mendatang.
+      </p>
+    </section>
+
+    <section class="article">
+      <h3>Peran Energi Terbarukan dalam Mengurangi Pencemaran</h3>
+      <p>
+        Energi terbarukan seperti energi surya dan angin memiliki potensi besar dalam mengurangi ketergantungan kita pada bahan bakar fosil. Pemanfaatan energi ini dapat mengurangi polusi udara, serta emisi gas rumah kaca yang menjadi penyebab utama perubahan iklim. Berinvestasi dalam energi terbarukan adalah langkah penting menuju masa depan yang lebih bersih dan hijau.
+      </p>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <!-- Bagian Kontak -->
+    <h1 align="center" id="contact">~ Kontak ~</h1>
+    <section class="contact">
+      <h3>Hubungi Kami</h3>
+      <form>
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lingkungan Hidup yang Indah. Semua hak cipta dilindungi. <a href="#">Kebijakan Privasi</a></p>
+  </footer>
+
+</body>
+</html>

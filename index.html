@@ -5,186 +5,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Selamat Datang di Kota Ponorogo</title>
   <style>
-    /* Global Styles */
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f7f7f7;
-      color: #333;
-    }
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  color: #333;
+}
 
-    /* Header h1 */
-    h1 {
-      font-size: 3em; /* Ukuran font untuk h1 */
-      color: #ff0000;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
+/* Header h1 */
+h1 {
+  font-size: 3em; /* Ukuran font untuk h1 */
+  color: #ff0000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-    /* Header h2 */
-    h2 {
-      font-size: 1.5em; /* Ukuran font untuk h2 */
-      color: #2c3e50;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+/* Header h2 */
+h2 {
+  font-size: 1.5em; /* Ukuran font untuk h2 */
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-    /* Container */
-    .container {
-      width: 90%;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
-    /* Header */
-    header {
-      background: url('img/hitam.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 60px 0;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
-    }
+header {
+  background-color: #000; /* Set background header menjadi hitam */
+  color: white;
+  padding: 15px 0; /* Padding vertikal 20px untuk kesan lebih rapat */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Pastikan lebar header sesuai dengan lebar layar */
+  height: 20vh; /* Ubah menjadi 30vh untuk memperkecil tinggi header */
+  display: flex;
+  justify-content: center; /* Menjaga konten tetap di tengah */
+  align-items: center; /* Menjaga konten di tengah vertikal */
+}
 
-    /* Navbar Styles */
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-      display: flex;
-      justify-content: center; /* Center the navbar items */
-      border-top: 2px solid #ecf0f1; /* Add a top border for some structure */
-      border-bottom: 2px solid #ecf0f1; /* Add a bottom border to separate navbar from content */
-      background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for the navbar */
-      border-radius: 8px; /* Rounded corners for a sleek look */
-    }
 
-    header nav ul li {
-      margin-right: 30px;
-      position: relative;
-    }
+/* Navbar Styles */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Menghilangkan margin default */
+  display: flex;
+  justify-content: center; /* Navbar item berada di tengah */
+  background-color: rgba(0, 0, 0, 0.7); /* Background navbar sedikit transparan */
+  border-radius: 8px; /* Sudut navbar menjadi melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+}
 
-    header nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: 500;
-      transition: color 0.3s ease, transform 0.3s ease; /* Added transition for color and scale effect */
-      padding: 10px 15px; /* Add some padding for clickable area */
-      border-radius: 6px; /* Rounded corners for the nav items */
-    }
+header nav ul li {
+  margin-right: 30px; /* Spasi antar item navbar */
+}
 
-    header nav ul li a:hover {
-      color: #ecf0f1;
-      background-color: #e74c3c; /* Background color change on hover */
-      transform: scale(1.1); /* Slight scale up effect for hover */
-    }
+header nav ul li:last-child {
+  margin-right: 0; /* Menghilangkan margin pada item terakhir */
+}
 
-    header nav ul li a:active {
-      color: #ff6347; /* Active link color */
-      transform: scale(0.98); /* Slightly reduce the size on click */
-    }
+header nav ul li a {
+  color: #fff; /* Warna teks putih pada navbar */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  font-size: 1.3em; /* Ukuran font yang sedikit lebih besar */
+  font-weight: 600; /* Menambah ketebalan font */
+  transition: all 0.3s ease; /* Efek transisi saat hover */
+  padding: 12px 18px; /* Padding agar tombol navbar lebih besar */
+  border-radius: 6px; /* Sudut tombol navbar melengkung */
+}
 
-    /* Active link indicator */
-    header nav ul li a.active {
-      border-bottom: 3px solid #ff6347; /* Add underline to the active link */
-    }
+header nav ul li a:hover {
+  background-color: rgba(255, 87, 34, 0.8); /* Warna background oranye pada hover */
+  color: white; /* Menjaga warna teks tetap putih */
+  transform: translateY(-4px); /* Efek gerakan naik sedikit */
+}
 
-    /* Section */
-    .section {
-      padding: 40px 0;
-      background-color: white;
-      margin-bottom: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      text-align: center;
-    }
+header nav ul li a:active {
+  background-color: #ff5722; /* Warna oranye lebih gelap saat aktif */
+  transform: translateY(2px); /* Efek gerakan turun saat klik */
+}
 
-    .section:nth-child(odd) {
-      background-color: #f4f6f7;
-    }
+/* Section */
+.section {
+  padding: 40px 0;
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
 
-    .section p {
-      font-size: 1.2em;
-      line-height: 1.8;
-      color: #7f8c8d;
-      max-width: 900px;
-      margin: 0 auto 30px auto;
-    }
+.section:nth-child(odd) {
+  background-color: #f4f6f7;
+}
 
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
+.section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #7f8c8d;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: #fff;
-    }
+.gallery img:hover {
+  transform: scale(1.05);
+}
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.5em;
-      }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+}
 
-      header nav ul {
-        text-align: center;
-        margin-top: 15px;
-      }
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
 
-      header nav ul li {
-        display: inline-block;
-        margin: 10px;
-      }
+  header nav ul {
+    text-align: center;
+    margin-top: 15px;
+  }
 
-      .section {
-        padding: 30px 15px;
-      }
+  header nav ul li {
+    display: inline-block;
+    margin: 10px;
+  }
 
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+  .section {
+    padding: 30px 15px;
+  }
 
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2em;
-      }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
-      header nav ul li {
-        display: block;
-        margin-bottom: 10px;
-      }
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
 
-      .gallery {
-        grid-template-columns: 1fr;
-      }
+  header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-      footer {
-        font-size: 14px;
-      }
-    }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -192,7 +195,7 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <h1>Kota Ponorogo</h1>
+      <h1>~ Kota Ponorogo ~</h1>
       <nav>
         <ul>
           <li><a href="#tentang" class="active">Tentang</a></li>
@@ -267,6 +270,12 @@
         <img src="img/ngebel.jpg" style="height: 200px">
         <img src="img/macan.jpg" style="height: 200px">
         <img src="img/bendo.jpeg" style="height: 200px">
+        <img src="img/sendang.jpg" style="height: 200px">
+        <img src="img/seloaji.jpeg" style="height: 200px">
+        <img src="img/masjid.jpg" style="height: 200px">
+        <img src="img/widodaren.jpg" style="height: 200px">
+        <img src="img/gajah.jpg" style="height: 200px">
+        <img src="img/pcc.jpeg" style="height: 200px">
       </div>
     </div>
   </section>
